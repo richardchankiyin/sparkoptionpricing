@@ -5,6 +5,14 @@ import scala.util.Random
 object MonteCarlo {
    val random = new Random()
 
+   /*
+    * s - spot price
+    * x - strike price
+    * r - risk free int rate per annum
+    * sigma - volatility per annum
+    * t - time to expire (years)
+    */
+
    def simPriceCompound (n:Int,s:Double,r:Double,sigma:Double,t:Double) : Double = {
      var price = s
      for (i <- 1 to n) {
