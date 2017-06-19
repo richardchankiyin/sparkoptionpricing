@@ -10,7 +10,7 @@ object TestApp extends App {
    printf("config:" + conf.toDebugString + "\n")
    val sc = new SparkContext(conf)
 
-   val n = 10000
+   val n = 1000000
 
    val result = sc.parallelize(for (i<-1 to n) yield i).map((a:Int)=>{print(s"$a\n"); a*10}).reduce((a,b)=>{a+b})
 

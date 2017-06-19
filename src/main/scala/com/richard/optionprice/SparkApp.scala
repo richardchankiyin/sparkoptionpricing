@@ -27,7 +27,7 @@ object SparkApp extends App {
         val riskFreeRate = 0.01
         val volatility = 0.2
         val timeToExpire = 0.5
-        print(s"Task $a -- "); val r = MonteCarlo.callPrice(5000,spotPrice,strikePrice,riskFreeRate,volatility,timeToExpire); print(s"$r"); r}).reduce((a,b)=>{a+b})/n
+        print(s"Task $a -- "); val r = MonteCarlo.callPrice(5000,spotPrice,strikePrice,riskFreeRate,volatility,timeToExpire); print(s"$r\n"); r}).reduce((a,b)=>{a+b})/n
 
    print(s"Result Price: $price \n")
 
